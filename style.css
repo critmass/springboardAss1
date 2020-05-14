@@ -164,10 +164,13 @@ video {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card-back img {
-  opacity: 80%;
+  opacity: 50%;
 }
 
 .card-front {
@@ -181,4 +184,9 @@ video {
   -moz-transform: rotateY(.5turn);
   -webkit-transform: rotateY(.5turn);
 }
+
+/* .card-spot.flipped .card-back img {
+  opacity: 0%;
+  transition-delay: opacity 1000ms;
+} */
 
