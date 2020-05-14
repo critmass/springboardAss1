@@ -156,7 +156,7 @@ function handleCardClick(event) {
         // the CSS
         thisCard.classList.remove("flipped")
         thatCard.classList.remove("flipped")
-      }, 4000)
+      }, 3200)
     }
   }
 }
