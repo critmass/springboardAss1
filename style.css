@@ -1,0 +1,182 @@
+
+/* TODO: figure out how to make this work on Fire Fox */
+
+body {
+  
+  margin: 0%; 
+  overflow: hidden;
+}
+
+#game-wrapper {
+  margin: 0%;
+  overflow: hidden;
+  background-color: rgba(
+    25,
+    25,
+    112,
+    0.5
+  );
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#you-won-splash {
+  position: absolute;
+  background-color: rbga(f5,f5,f5,0.8);
+  color: whitesmoke;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -5;
+  transition: 2000ms;
+}
+
+.win {
+  z-index: 5;
+}
+
+video {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+#game-title {
+  position: absolute;
+  top: 3vh;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  font-family: Impact;
+  font-weight: 10;
+  color: rgba(0,0,0,.3);
+  z-index: 1;
+}
+
+.title-letter {
+  transition: 2000ms;
+}
+
+.title-letter.flash {
+  color: white;
+  transition: 0ms;
+}
+
+#restart-icon {
+  display: inline;
+  height: 45px;
+  padding: 3px; 
+  transition: 
+    transform 4000ms, 
+    background-color 6000ms, 
+    filter 2000ms,
+    opacity 2000ms;
+  border-radius: 50%; 
+  opacity: 40%;
+}
+
+#restart-icon.flash {
+  transition: 
+    transform 4000ms, 
+    background-color 6000ms,
+    filter 0ms,
+    opacity 0ms;
+  filter: invert(100%);
+  opacity: 100%;  
+}
+
+#restart-icon:hover {
+  background-color: rgba(253, 252, 252, 0.4);
+  transition: 
+    transform 4000ms, 
+    background-color 300ms, 
+    filter 2000ms,
+    opacity 2000ms;
+}
+
+#restart-icon:active {
+  transition: 
+    transform 0ms, 
+    background-color 6000ms, 
+    filter 2000ms,
+    opacity 2000ms;
+  transform: rotate(-240deg);
+}
+
+#game {
+  position: absolute;
+  align-self: center;
+  top: 15%;
+  left: 5%;
+  width: 100%;
+  height: 90%;
+  z-index: 1;
+  background-color: transparent;
+  transition: 1000ms;
+}
+
+#game.getting-setup {
+  opacity: 0%;
+}
+
+.card-spot {
+  width: 13%;
+  height: 27%;
+  padding: 1%;
+  display: inline-block;
+  border-radius: 5%;
+  transition: background-color 3000ms;
+}
+
+.card-spot:hover {
+  background-color: rgba(255,255,255,0.4);
+  transition: background-color 400ms;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 3000ms;
+  -moz-transition: 3000ms;
+  transform-style: preserve-3d;
+  border-radius: 5%;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  
+}
+
+.card-front img, .card-back img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-back img {
+  opacity: 80%;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  -moz-transform: rotateY(.5turn);
+  -webkit-transform: rotateY(.5turn);
+}
+
+.card-spot.flipped .card, .card-spot.matched .card {
+  transform: rotateY(.5turn);
+  -moz-transform: rotateY(.5turn);
+  -webkit-transform: rotateY(.5turn);
+}
+
