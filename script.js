@@ -167,6 +167,7 @@ function checkEndOfGame(){
   return matchedCards.length === allCards.length
 }
 
+// TODO: fix this 
 function endGame(){ 
   const youWonSplash = document.querySelector("#you-won-splash")
   youWonSplash.classList.add("win")

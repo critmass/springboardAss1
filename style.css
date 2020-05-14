@@ -1,5 +1,8 @@
+/* Memory Game assignment from the Springboard Software Engineering Bootcamp
+as completed by Jason Cox 05-2020 */
 
-/* TODO: figure out how to make this work on Fire Fox */
+
+/* TODO: figure out how to make this work on FireFox */
 
 body {
   
@@ -36,11 +39,10 @@ body {
 
 video {
   position: relative;
-  min-height: 100vh;
+  min-height: 130vh;
   min-width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 0%);
+  float: right;
+  top: -30vh;
   z-index: -1;
 }
 
